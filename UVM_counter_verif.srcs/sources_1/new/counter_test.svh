@@ -6,6 +6,7 @@ class counter_test extends uvm_test;
     `uvm_component_utils(counter_test);
     
     virtual interface counter_if vif;
+    integer iters = 10;
     
     function new(string name, uvm_component parent);
         super.new(name, parent);
@@ -18,7 +19,6 @@ class counter_test extends uvm_test;
     
     task run_phase(uvm_phase phase);
         super.run_phase(phase);
-        integer iters = 10;
         //testing the design
         phase.raise_objection(this);
             repeat(5) @(negedge vif.clk);

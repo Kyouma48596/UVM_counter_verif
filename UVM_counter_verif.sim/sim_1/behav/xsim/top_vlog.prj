@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../UVM_counter_verif.srcs/sources_1/new" \
+"../../../../UVM_counter_verif.srcs/sources_1/new/counter.sv" \
+"../../../../UVM_counter_verif.srcs/sources_1/new/counter_if.sv" \
+"../../../../UVM_counter_verif.srcs/sources_1/new/counter_pkg.sv" \
+"../../../../UVM_counter_verif.srcs/sources_1/new/top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
