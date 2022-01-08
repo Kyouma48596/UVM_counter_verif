@@ -21,6 +21,12 @@ interface counter_if;
         clk = 1'b0;
         forever #5 clk = ~clk;
     end
+//reset
+    initial begin
+        rst = 1'b0;
+        repeat(3) @(negedge clk);
+        rst = 1'b1;
+    end
 //behavioral checking
     always @(posedge clk) begin
         if(~rst) begin
