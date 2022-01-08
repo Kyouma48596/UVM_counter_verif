@@ -13,12 +13,23 @@ class counter_test extends uvm_test;
     
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-        //global interface
+        vif = global_cif;
     endfunction
     
     task run_phase(uvm_phase phase);
         super.run_phase(phase);
-        //testing the counter
+        integer iters = 10;
+        //testing the design
+        phase.raise_objection(this);
+            repeat(5) @(negedge vif.clk);
+            repeat(iters) begin
+                @(negedge vif.clk) begin
+                    vif.ld = $random;
+                    vif.inc = $random;
+                    vif.data_in = $random;
+                end
+            end
+        phase.drop_objection(this);
     endtask
 
 endclass

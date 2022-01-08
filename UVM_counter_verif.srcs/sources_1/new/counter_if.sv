@@ -24,6 +24,7 @@ interface counter_if;
 //reset
     initial begin
         rst = 1'b0;
+        $monitor("rst:%0b, ld:%0b, inc:%0b, data_in:%0h, q:%0h, q_beh:%0h", rst, ld, inc, data_in, q, q_behavioral);
         repeat(3) @(negedge clk);
         rst = 1'b1;
     end
