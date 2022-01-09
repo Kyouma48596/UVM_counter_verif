@@ -5,6 +5,7 @@ class counter_driver extends uvm_agent;
     `uvm_component_utils(counter_driver);
     
     virtual interface counter_if vif;
+    integer iters = 10;
     
     function new (string name, uvm_component parent);
         super.new(name, parent);
