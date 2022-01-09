@@ -1,3 +1,5 @@
+import uvm_pkg::*;
+`include "uvm_macros.svh"
 class counter_scoreboard extends uvm_agent;
 
     `uvm_component_utils(counter_scoreboard)

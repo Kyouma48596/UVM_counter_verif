@@ -6,7 +6,7 @@ package counter_pkg;
     `include "memory_scoreboard.svh"
     `include "memory_driver.svh"
     `include "memory_monitor.svh"
-    `include "memory_test_env.svh"
+    `include "memory_env.svh"
     
     virtual interface counter_if global_cif;
     

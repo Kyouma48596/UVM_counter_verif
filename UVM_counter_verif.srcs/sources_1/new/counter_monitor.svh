@@ -1,3 +1,5 @@
+import uvm_pkg::*;
+`include "uvm_macros.svh"
 class counter_monitor extends uvm_agent;
 
     `uvm_component_utils(counter_monitor);
