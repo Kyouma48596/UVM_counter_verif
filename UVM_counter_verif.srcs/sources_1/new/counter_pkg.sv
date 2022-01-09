@@ -2,11 +2,11 @@ package counter_pkg;
 
     import uvm_pkg::*;
     `include "uvm_macros.svh"
-    `include "memory_test.svh"
-    `include "memory_scoreboard.svh"
-    `include "memory_driver.svh"
-    `include "memory_monitor.svh"
-    `include "memory_env.svh"
+    `include "counter_test.svh"
+    `include "counter_scoreboard.svh"
+    `include "counter_driver.svh"
+    `include "counter_monitor.svh"
+    `include "counter_env.svh"
     
     virtual interface counter_if global_cif;
     

@@ -16,7 +16,7 @@ class counter_test extends uvm_test;
         environment = counter_env::type_id::create("environment", this);
     endfunction
     
-    function connect_phase(uvm_phase phase);
+    function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
     endfunction
 endclass
