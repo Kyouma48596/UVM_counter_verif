@@ -4,7 +4,6 @@ import uvm_pkg::*;
 class counter_test extends uvm_test;
     
     `uvm_component_utils(counter_test)
-    
     counter_env environment;
     
     function new (string name, uvm_component parent);
