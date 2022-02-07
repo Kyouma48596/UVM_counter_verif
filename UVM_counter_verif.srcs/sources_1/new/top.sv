@@ -7,7 +7,7 @@ module top;
     counter_if cif();
     counter DUT(cif.cntr_mp);
     initial begin
-        counter_pkg::global_cif = cif;
+        uvm_config_db#(virtual counter_if)::set(uvm_root::get(), "*", "dut_vi", cif);
         run_test("counter_test");
     end
     

@@ -6,6 +6,7 @@ class counter_driver extends uvm_agent;
     
     virtual interface counter_if vif;
     integer iters = 10;
+    my_dut_config dut_config_0;
     
     function new (string name, uvm_component parent);
         super.new(name, parent);
@@ -13,7 +14,9 @@ class counter_driver extends uvm_agent;
     
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-        vif = global_cif;
+        dut_config_0 = my_dut_config::type_id::create("dut_config_0", this);
+        uvm_config_db#(my_dut_config)::get(this, "", "dut_config_0", dut_config_0);
+        vif = dut_config_0.dut_vi;
     endfunction
     
     task run_phase(uvm_phase phase);
