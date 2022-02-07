@@ -1,4 +1,4 @@
-class counter_req_txn extends uvm_transaction;
+class counter_req_txn extends uvm_sequence_item;
 
 /*-------------------------------------------------------------------------------
 -- Interface, port, fields

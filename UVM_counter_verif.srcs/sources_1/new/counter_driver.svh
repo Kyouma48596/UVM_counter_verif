@@ -1,12 +1,12 @@
 import uvm_pkg::*;
 `include "uvm_macros.svh"
-class counter_driver extends uvm_agent;
+class counter_driver extends uvm_driver #(counter_req_txn);
 
-    `uvm_component_utils(counter_driver);
+    `uvm_component_utils(counter_driver)
     
     virtual interface counter_if vif;
-    integer iters = 10;
     my_dut_config dut_config_0;
+    counter_req_txn txn;
     
     function new (string name, uvm_component parent);
         super.new(name, parent);
@@ -22,16 +22,15 @@ class counter_driver extends uvm_agent;
     task run_phase(uvm_phase phase);
         super.run_phase(phase);
         //testing the design
-        phase.raise_objection(this);
-            repeat(5) @(negedge vif.clk);
-            repeat(iters) begin
-                @(negedge vif.clk) begin
-                    vif.ld = $random;
-                    vif.inc = $random;
-                    vif.data_in = $random;
-                end
-            end
-        phase.drop_objection(this);
+        forever begin 
+            @(negedge vif.clk)
+            seq_item_port.get_next_item(txn);
+            vif.ld = txn.ld;
+            vif.inc = txn.inc;
+            vif.data_in = txn.data_in;
+            seq_item_port.item_done();
+            `uvm_info("DRIVER", $sformatf("Ran : %s",txn.convert2string()), UVM_MEDIUM);
+        end
     endtask
     
 endclass

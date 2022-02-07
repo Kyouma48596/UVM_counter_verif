@@ -6,7 +6,8 @@ class counter_test extends uvm_test;
     `uvm_component_utils(counter_test)
     counter_env environment;
     my_dut_config dut_config_0;
-    
+    my_counter_sequence seq;
+
     function new (string name, uvm_component parent);
         super.new(name, parent);
     endfunction
@@ -22,4 +23,12 @@ class counter_test extends uvm_test;
     function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
     endfunction
+
+    task run_phase(uvm_phase phase);
+        super.run_phase(phase);
+        phase.raise_objection(this);
+        seq = my_counter_sequence::type_id::create("seq", this);
+        //seq.start(environment.my_seq);
+        phase.drop_objection(this);
+    endtask : run_phase
 endclass
