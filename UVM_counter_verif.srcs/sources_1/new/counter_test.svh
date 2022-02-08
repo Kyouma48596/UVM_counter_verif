@@ -28,7 +28,7 @@ class counter_test extends uvm_test;
         super.run_phase(phase);
         phase.raise_objection(this);
         seq = my_counter_sequence::type_id::create("seq", this);
-        //seq.start(environment.my_seq);
+        seq.start(environment.my_seq);
         phase.drop_objection(this);
     endtask : run_phase
 endclass

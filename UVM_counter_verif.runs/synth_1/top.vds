@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb  8 10:52:38 2022
+# Process ID: 12196
+# Current directory: E:/UVM_counter_verif/UVM_counter_verif.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: E:/UVM_counter_verif/UVM_counter_verif.runs/synth_1/top.vds
+# Journal file: E:/UVM_counter_verif/UVM_counter_verif.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7112
+ERROR: [Synth 8-1031] uvm_pkg is not declared [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_pkg.sv:3]
+ERROR: [Synth 8-1766] cannot open include file uvm_macros.svh [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_pkg.sv:4]
+ERROR: [Synth 8-2841] use of undefined macro uvm_object_utils [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/my_dut_config.svh:12]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/my_dut_config.svh:12]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/my_dut_config.svh:19]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_req_txn.svh:15]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_req_txn.svh:22]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/my_counter_sequence.svh:12]
+ERROR: [Synth 8-2841] use of undefined macro uvm_declare_p_sequencer [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/my_counter_sequence.svh:13]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/my_counter_sequence.svh:19]
+ERROR: [Synth 8-2841] use of undefined macro uvm_component_utils [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_coverage.svh:16]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_coverage.svh:16]
+ERROR: [Synth 8-988] inc_ is already declared [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_coverage.svh:23]
+ERROR: [Synth 8-988] rst_ is already declared [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_coverage.svh:23]
+ERROR: [Synth 8-2715] syntax error near } [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_coverage.svh:23]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_coverage.svh:33]
+ERROR: [Synth 8-2841] use of undefined macro uvm_info [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_coverage.svh:53]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_coverage.svh:53]
+ERROR: [Synth 8-1031] uvm_pkg is not declared [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_scoreboard.svh:1]
+ERROR: [Synth 8-1766] cannot open include file uvm_macros.svh [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_scoreboard.svh:2]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_scoreboard.svh:5]
+ERROR: [Synth 8-2715] syntax error near ( [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_scoreboard.svh:31]
+ERROR: [Synth 8-2715] syntax error near , [E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_scoreboard.svh:31]
+Failed to read verilog 'E:/UVM_counter_verif/UVM_counter_verif.srcs/sources_1/new/counter_pkg.sv'
+INFO: [Common 17-83] Releasing license: Synthesis
+5 Infos, 0 Warnings, 0 Critical Warnings and 24 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  8 10:52:54 2022...

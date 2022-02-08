@@ -110,7 +110,7 @@ namespace XILINX_DPI {
 		DPIAllocateDPIScopes(1) ;
 		DPISetDPIScopeFunctionName(0, "m__uvm_report_dpi") ;
 		DPISetDPIScopeHierarchy(0, "uvm_pkg") ;
-		DPIRelocateDPIScopeIP(0, (char*)(0x40acb0)) ;
+		DPIRelocateDPIScopeIP(0, (char*)(0x40ee58)) ;
 		DPIAddDPIScopeAccessibleFunction(0, 0) ;
 	}
 
@@ -125,7 +125,7 @@ extern "C" {
 
 extern "C" {
 
-	extern void subprog_m_75164ecb_556ead11_2227(char*, char*, char*);
+	extern void subprog_m_75164ecb_556ead11_2231(char*, char*, char*);
 }
 
 
@@ -153,7 +153,7 @@ extern "C" {
 		int callingProcessOffset = topOffset() ;
 		char* SP ;
 		void* oldSPcontext = DPIGetCurrentContext();
-		SP = DPIInitializeFunction(IP + 1017448, 168, 336032) ;
+		SP = DPIInitializeFunction(IP + 1019208, 168, 444768) ;
 		char driver0[32] ;
 		for(int i = 0 ; i < 32 ; ++i) driver0[i] = 0 ;
 		char driver1[32] ;
@@ -172,32 +172,32 @@ extern "C" {
 		DPIMemsetDpiToSv( ptrToSP, (char*)(&arg0), 4, 1 );
 		ptrToSP = ptrToSP + 8; 
 		}
-		DPIScheduleTransactionBlocking(IP +1016944, driver0, (char*)(&copyArg_0_0), 0, 31) ;
+		DPIScheduleTransactionBlocking(IP +1018704, driver0, (char*)(&copyArg_0_0), 0, 31) ;
 		const char* copyArg_1_1[1] ;
 		copyArg_1_1[0] = ( arg1) ;
-		DPIScheduleTransactionBlocking(IP +1017000, driver1, (char*)(&copyArg_1_1), 0, 31) ;
+		DPIScheduleTransactionBlocking(IP +1018760, driver1, (char*)(&copyArg_1_1), 0, 31) ;
 		const char* copyArg_2_2[1] ;
 		copyArg_2_2[0] = ( arg2) ;
-		DPIScheduleTransactionBlocking(IP +1017056, driver2, (char*)(&copyArg_2_2), 0, 31) ;
+		DPIScheduleTransactionBlocking(IP +1018816, driver2, (char*)(&copyArg_2_2), 0, 31) ;
 		char copyArg_3_3[8];
 		{
 		char* ptrToSP = (char*)copyArg_3_3;
 		DPIMemsetDpiToSv( ptrToSP, (char*)(&arg3), 4, 1 );
 		ptrToSP = ptrToSP + 8; 
 		}
-		DPIScheduleTransactionBlocking(IP +1017112, driver3, (char*)(&copyArg_3_3), 0, 31) ;
+		DPIScheduleTransactionBlocking(IP +1018872, driver3, (char*)(&copyArg_3_3), 0, 31) ;
 		const char* copyArg_4_4[1] ;
 		copyArg_4_4[0] = ( arg4) ;
-		DPIScheduleTransactionBlocking(IP +1017168, driver4, (char*)(&copyArg_4_4), 0, 31) ;
+		DPIScheduleTransactionBlocking(IP +1018928, driver4, (char*)(&copyArg_4_4), 0, 31) ;
 		char copyArg_5_5[8];
 		{
 		char* ptrToSP = (char*)copyArg_5_5;
 		DPIMemsetDpiToSv( ptrToSP, (char*)(&arg5), 4, 1 );
 		ptrToSP = ptrToSP + 8; 
 		}
-		DPIScheduleTransactionBlocking(IP +1017224, driver5, (char*)(&copyArg_5_5), 0, 31) ;
+		DPIScheduleTransactionBlocking(IP +1018984, driver5, (char*)(&copyArg_5_5), 0, 31) ;
 		char* oldSP = *((char**)(IP + callingProcessOffset + 80)) ; 
-		DPIInvokeFunction(IP + callingProcessOffset, SP, (void*)(subprog_m_75164ecb_556ead11_2227), IP) ;
+		DPIInvokeFunction(IP + callingProcessOffset, SP, (void*)(subprog_m_75164ecb_556ead11_2231), IP) ;
 		DPIDeleteFunctionInvocation(SP) ;
 		*((char**)(IP + callingProcessOffset + 80)) = oldSP ; 
 		DPISetCurrentContext(oldSPcontext);
